@@ -1,1433 +1,515 @@
-
-body{
-  font-family: 'Lexend Deca', sans-serif;
-  padding: 0;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.body-azulao{
-  background-color: rgb(14, 54, 175);
-
+body {
+    font-family: 'Open Sans', sans-serif;
 }
-
-.login-txt{
-  font-size: 3rem;
-  color: white;
-  margin-left: 5%;
-  margin-top: 25%;
-  margin-bottom: 15%  ;
-}
-
-.form-login{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-decoration: none;
-}
-
-.form-login input{
-  margin-bottom: 7%;
-  padding: 4%;
-  border-radius: 15px;
-  width: 70%;
-}
-
-.form-login input:hover{
-  background-color: rgb(210, 210, 215);
-}
-
-.button-login{
-  color: #eee;
-  background-color: rgb(14, 54, 175);
-  border: 1px solid #eee;
-  width: 45%;
-  border-radius: 20px;
-  margin-top: 6%;
-  font-size: 1.3rem;
-  padding: 1.5%;
-}
-.links{
-  text-decoration: none;
-  color: white;
-}
-
-.button-login:active{
-  background-color: rgb(62, 167, 236);
-}
-
-.img-login{
-  display: flex;
-  width: 100%;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.img-login img{
-  width: 20%;
-  
-}
-
-.registrar-login{
-  margin-left: 8%;
-  margin-top: 9%;
-  font-size: 1.2rem;
-}
-
-.texto-branco{
-  color: white;
-}
-
-.logar-login{
-  margin-top: 9%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text-logar-login{
-  margin-bottom: 8%;
-}
-
-/* CADASTRO-CSS */
-
-.text-cadastro{
-  font-size: 3rem;
-  padding-left:5%;
-  margin-bottom: 10%;
-}
-
-.p-cadastro{
-  padding-bottom: 10%;
-}
-
-#white-text{
-  color: antiquewhite;
-}
-
-.input-cadastro input{
-  border-radius: 40px;
-  margin-left: 1%;
-  padding: 6%;
-  margin-right: 2%;
-  width: 33%;
-  margin-bottom: 4%;
-}
-
-.input1-cadastro input{
-  margin-top: 2%;
-  margin-bottom: 4%;
-  width:82%;
-  padding: 7%;
-  margin-right: 3%;
-}
-
-.porra-games {
-  margin-left: 3%;
-  color:white
-}
-
-.adilson{
-  padding: 4%;
-  margin-left: 35%;
-  font-size: 1.5rem;
-  border-radius: 50px;
-  background-color: rgb(14, 54, 175) ;
-  color: white ;
-  border: 2px solid white;
-}
-
-/*tela-inicial */
-.body-inicial{
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-}
-
-
-
-.header-inicial h1{
-  color: white;
-  padding: 20%;
-  margin-top: 0;
-  padding-bottom: 0;
-  margin-left: -8%;
-  margin-bottom:3%;
-}
-
-.header-inicial{
-  background-color:  rgb(44, 68, 201);
-  width: 100%;
-}
-
-
-.barra{
-  background-color: rgb(112, 163, 245);
-  width: 80%;
-  margin-left: 5%;
-  border-radius: 50px;
-  padding-left: 10%;
-  color: rgb(83, 77, 77);
-  display: flex;
-  margin-top: 5%;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  justify-content: end;
-  gap: 30%;
-}
-.barra img{
-  width: 15%;
-  margin-right: 1rem;
-  margin-left: -3%;
-  padding: 4px;
-}
-
-.icone{
-  width: 15%;
-  background-color: rgb(112, 163, 245);
-  margin-top: 20%;
-  margin-left: 10%;
-  border-radius: 0.8rem;
-  padding: 2%;
-  margin-right: 6%;
-  cursor: pointer;
-}
-.icones{
-  width: 13.5%;
-  background-color: rgb(112, 163, 245);
-  margin-top: 20%;
-  margin-left: 10%;
-  border-radius: 0.8rem;
-  padding: 2%;
-  margin-right: 6%;
-  cursor: pointer;
-}
-
-
-.itens, .itens2{
-  display: flex;
-  width: 100%;
-}
-.icone img, .icones img{
-  width: 100%;
-}
-
-footer div{
-  background-color: rgb(30, 54, 191);
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  bottom: 0;
-  position: fixed;
-  margin-bottom: 0;
-  
-}
-
-footer img{
-  width: 60%;
-  padding: 5%;
-  cursor: pointer;
-  margin-left: 13%;
-}
-.invisible{
-  background-color: rgb(112, 163, 245);
-}
-.search-container,  .search-icon{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-input#search-bar{
-  color: black;
-  background-color: rgb(112, 163, 245);;
-  border-radius: 15px;
-  margin: 0 auto;
-  width: 75%;
-  height: 50px;
-  padding: 0 20px;
-  font-size: 1rem;
-  border: 1px solid #D0CFCE;
-  outline: none;
-  &:focus{
-    border: 1px solid #000000;
-    transition: 0.35s ease;
-    color: #000000;
-    &::-webkit-input-placeholder{
-      transition: opacity 0.45s ease; 
-        opacity: 0;
-     }
-    &::-moz-placeholder {
-      transition: opacity 0.45s ease; 
-        opacity: 0;
-     }
-    &:-ms-placeholder {
-     transition: opacity 0.45s ease; 
-       opacity: 0;
-     }    
-   }
- }
-
-.search-icon{
-  width: 30%;
-  top: 15%;
-}
-::placeholder{
-  color: #3b3b3b;
-}
-
-.nomes-01{
-  display: flex;
-  gap: 20%;
-  margin-left: 11%;
-  margin-right: 8%;
-  margin-top: -2%;
-}
-.nomes-02{
-  margin-left: 9%;
-}
-/* Css cadastro motorista */
-
-
-  .header-motorista-pt1{
-      color: white;
-      width: 100%;
-      background-color: rgb(30, 54, 191);
-      margin-top: 0;
-      padding: 4%;
-      padding-bottom: 0.5%;
-      margin-bottom: 10%;
-  }
-  .estilos-motorista{
-      width: 90%;
-      background-color: rgb(112, 163, 245);
-      display: flex;
-      gap: 5%;
-      border-radius: 10px;
-      margin-bottom: 8%;
-      color: white;
-      font-size: 1.5rem;
-      margin-left: 5%;
-  }
-  .estilos-motorista img{
-      width: 15%;
-      margin-left: 5%
-  }
-  .alinhar-motorista{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .header-motorista-pt2{
-      color: white;
-      width: 100%;
-      background-color: rgb(30, 54, 191);
-      margin-top: 0;
-      padding: 4%;
-      padding-bottom: 0.5%;
-      margin-bottom: 10%;
-  }
-  .text-1-motorista{
-      margin-left: 7%;
-      font-size: 1.2rem;
-  }
-  .textos-motorista{
-      margin-left: 7%;
-      margin-top: 8%;
-  }
-  .camerazinha{
-      display: flex;
-      justify-content: center;
-      margin-top: 8%;
-  }
-  .botao-motorista{
-      display: flex;
-      justify-content: center;
-  }
-  .botao-motorista button{
-      padding: 4%;
-      width: 70%;
-      border-radius: 50px;
-      background-color: rgb(30, 54, 191);
-      margin-top: 20%;
-      color: white;
-      font-size: 1.4rem;
-  }
-  /* Motorista-final */
-  .img-cadastro-motorista{
-      display: flex;
-      justify-content: center;
-      margin-top: 45%;
-      margin-bottom: 10%;
-  }
-  .img-cadastro-motorista{
-      width: 100%;
-  }
-  .analisando-docs{
-      color: white;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  }
-  .analisando-docs p{
-      font-size: 1.4rem;
-      margin: 2%;
-  }
-  .avisar-motorista-cadastro{
-      color: white;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  }
-  .avisar-motorista-cadastro p{
-      margin-top: 10%;
-      margin-bottom: -3%;
-  }
-  .botao-continuar{
-      display: flex;
-      justify-content: center;
-  }
-  .botao-continuar button{
-      padding: 10px;
-      width: 70%;
-      border-radius: 10px;
-      background-color: rgb(30, 54, 191);
-      margin-top: 20%;
-      color: white;
-      font-size: 1.4rem;
-      border: 3px solid white;
-  }
-
-  /* Pagamentos */
-
-  .header-topo{
-      color: white;
-      width: 95%;
-      background-color: rgb(30, 54, 191);
-      margin-top: 0;
-      padding: 8%;
-      padding-bottom: 0.5%;
-      margin-bottom: 10%;
-      display: flex;
-  }
-  .header-topo h1{
-      padding-left: 4%;
-      font-size: 1.8rem;
-      padding-right: 0;
-  }
-  
-  .txt-negrito{
-      font-size: 1.3rem;
-      margin-left: 5%;
-  }
-  .saldo{
-      border: 1px solid black;
-      width: 85%;
-      margin-left: 5%;
-      padding-left: 4%;
-      border-radius: 15px;
-      margin-bottom: 10%;
-      font-size: 1.2rem;
-  }
-  .adc-saldo{
-      color: white;
-      background-color: black;
-      border: none;
-      border-radius: 15px;
-      padding: 3%;
-      margin-top: 6%;
-      margin-bottom: 6%;
-      font-size: 1rem;
-
-  }
-  .adc-pagamentos{
-      color: white;
-      background-color: black;
-      border: none;
-      border-radius: 15px;
-      padding: 3%;
-      margin-top: 6%;
-      margin-bottom: 6%;
-      font-size: 1rem;
-      margin-left: 5%;
-      margin-top: 1%;
-  }
-
-  /* Adicionar-pagamentos */
-  .formas-pagamento{
-      width: 100%;
-      margin-left: 10%;
-      display: flex;
-      margin-bottom: 12%;
-      font-weight: bold;
-      font-size: 1.2rem;
-  }
-  .formas-pagamento img{
-      width: 15%;
-      margin-right: 5%;
-  }
-
-  /*Conversas */
-  .conversas{
-      width: 94%;
-      margin-left: 6%;
-      display: flex;
-      margin-bottom: 12%;
-      font-weight: bold;
-      font-size: 1.4rem;
-      color: black;
-      
-  }
-  .conversas img{
-      width: 35%;
-      margin-right: 5%;
-  }
-  .link-chat{
-      text-decoration: none;
-      color: black;
-  }
-
-  /* Chat */
-
-  
-  .header-topo a{
-      width: 15%;
-      margin-right: 3%;
-      margin-left: 2%;
-      
-  }
-  .header-topo img{
-      width: 100%;
-      
-  }
-  .chat-eu{
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      width: 100%
-  }
-  .chat-eu div{
-      background-color: rgb(30, 54, 191);
-      width: 40%;
-      border-radius: 10px;
-      padding: 3%;
-      color: white;
-      margin-right: -10%;
-      margin-bottom: 10%;
-  }
-  .chat-motorista{
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      width: 100%
-  }
-  .chat-motorista div{
-      background-color: rgb(64, 65, 67);
-      width: 40%;
-      border-radius: 10px;
-      padding: 3%;
-      color: white;
-      margin-left: 6%;
-      margin-bottom: 10%;
-  }
-  .chat-eu p, .chat-motorista p{
-      margin-left: 5%;
-      font-size: 1.2rem;
-  }
-  .mensagem{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-  }
-  input#msg-chat{
-      color: white;
-      background-color: rgb(64, 65, 67);
-      border-radius: 15px;
-      margin: 0 auto;
-      margin-top: 15%;
-      width: 75%;
-      padding: 6%;
-      font-size: 1.2rem;
-      margin-left: 5%;
-      border: 1px solid #D0CFCE;
-      outline: none;
-      &:focus{
-        border: 1px solid #000000;
-        transition: 0.35s ease;
-        color: #fcf8f8;
-        &::-webkit-input-placeholder{
-          transition: opacity 0.45s ease; 
-            opacity: 0;
-         }
-        &::-moz-placeholder {
-          transition: opacity 0.45s ease; 
-            opacity: 0;
-         }
-        &:-ms-placeholder {
-         transition: opacity 0.45s ease; 
-           opacity: 0;
-         }    
-       }
-     }
-     input#msg-chat::placeholder{
-      color: white;
-     }
-     .enviar-msg{
-      display: flex;
-      width: 100%;
-     }
-    .enviar-msg img{
-      width: 15%;
-      margin-top: 12%;
-     }
-
-     /*escolher modelo de carro*/
-    
-
-     /* Escolher motorista */
-     .conversas .estrela{
-      width: 10%;
-
-     }
-     .coluna-estrela{
-      display: flex;
-      flex-direction: column;
-      
-     }
-     .linha-estrela{
-      display: flex;
-      flex-direction: row;
-     }
-
-     /* Perfil Motorista */
-
-     .metade-motorista{
-      width: 100%;
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-     }
-     .img-perfil-motorista{
-      width: 40%;
-      margin-top: 20%;
-    
-      border-radius: 50%;
-     }
-     .metade-motorista h4{
-      margin-top: -3%;
-     }
-     .dados-motorista{
-      display: flex;
-      flex-direction: row;
-     }
-     .viagens-motorista, .nota-motorista, .anos-motorista{
-      display: flex;
-      flex-direction: column;
-      margin-right: 135%;
-      margin-left: -65%;
-      align-items: center
-     }
-     .dados-motorista p{
-      margin-top: 4%;
-     }
-     .dados-motorista h2{
-      margin-bottom: -6px;
-     }
-     .escondidinho{
-      display: none;
-     }
-     .infos-adicionais-motorista{
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      margin-left: 8%;
-      margin-top: 5%;
-     }
-     .botao-descricao-motorista{
-      border: none;
-      width: 30%;
-      padding: 2%;
-      border-radius: 30px;
-      background-color: #cccaca;
-     }
-     .avaliacoes-motorista{
-      display: flex;
-      flex-direction: column;
-     }
-     .avaliacoes-motorista img{
-      width: 7%;
-      margin-top: -4%;
-     }
-     .enviar-solicitacao{
-      display: flex;
-      justify-content: center;
-      margin-top: 35%;
-      width: 100%;
-     }
-     .enviar-solicitacao button {
-      width: 120%;
-      padding: 5%;
-      background-color: rgb(30, 54, 191);
-      border-radius: 15px;
-      color: white;
-      font-size: 1.6rem;
-      margin-left: -15%;
-     }
-
-    /*Viagem recebida */
-    .itens{
-      position: relative;
-    }
-    .viagem-recebida{
-      position: absolute;
-      height: 40vh;
-      margin-left: 7%;
-      background-color: rgb(211, 211, 220);
-      width: 87%;
-      border-radius: 20px;
-      margin-top: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .viagem-recebida h2{
-      margin-top: 15%;
-      margin-bottom: 30%;
-    }
-
-    .viagem-recebida a{
-      color: blue;
-      font-size: 1.2rem;
-    }
-    .viagem-recebida button{
-      padding: 2%;
-   
-    }
-
-    .opaco{
-      opacity: 0.6;
-      position: relative;
-    }
-
-    .viagem-aceita a{
-      width: 85%;
-      margin-bottom: 4%;
-    }
-
-    .pagar-viagem{
-      width: 100%;
-      padding: 2%;
-      border-radius: 20px;
-      color: white;
-      background-color: rgb(30, 54, 191);
-      font-size: 1.2rem;
-      margin-top: 10%;
-    }
-
-    .negociar-valor-viagem{
-      width: 100%;
-      padding: 2%;
-      background-color: white;
-      border-radius: 20px;
-      font-size: 1.2rem;
-    }
-
-    .viagem-recebida p{
-      margin-top: -15%;
-    }
-
-
-
-    /*Viagem solicitada */
-    .passageiro-da-viagem{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-    .passageiro-da-viagem img{
-      width: 20%;
-      margin-left: 4%;
-    }
-    .passageiro-da-viagem p{
-      margin-top: 10%;
-      margin-left: 2%;
-      font-size: 1.2rem;
-    }
-    
-    .data-da-viagem{
-      margin-left: 6%;
-    }
-
-    .data-da-viagem p{
-      font-size: 1.2rem;
-    }
-
-    .destino-da-viagem{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }    
-
-    .barra-de-destino{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin-left: 14%;
-      border-bottom: 5px solid black;
-    }
-
-    .destino-da-viagem h1{
-      margin-left: 6%;
-    }
-   
-    .destino-da-viagem img{
-      margin-top: 5%;
-      margin-left: 8%;
-      border-radius: 20px;
-      width: 100%;
-    }
-
-    .botoes-viagem-solicitada{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 8%;
-      margin-left: 8%;
-    }
-
-   .botoes-viagem-solicitada a{
-      width: 70%;
-      margin-bottom: 6%;
-    }
-
-    .aceitar-viagem{
-      width: 100%;
-      padding: 2%;
-      border-radius: 20px;
-      color: white;
-      background-color: rgb(30, 54, 191);
-      font-size: 1.6rem;
-    }
-
-    .recusar-viagem{
-      width: 100%;
-      padding: 2%;
-      background-color: white;
-      border-radius: 20px;
-      font-size: 1.6rem;
-    }
-
-    /*Preço da viagem */
-
-    .escolher-preco{
+.container {
     display: flex;
     justify-content: center;
-    }
-
-    .escolher-preco input{
-      border: none;
-      font-size: 32px;
-      text-align: center;    
-      margin-top: 30%;
-    }
-
-    .enviar-preco button{
-      width: 70%;
-      padding: 2%;
-      color: white;
-      background-color: rgb(30, 54, 191);;
-      font-size: 1.4rem;
-      border-radius: 20px;
-    }
-
-    .enviar-preco{
-      width: 100%;
-      margin-top: 60% 
-    }
-
-    .enviar-preco a{
-      margin-left: 22%;
-    }
-
-    /*Viagem aceita */
-    .subir-formaspagamento{
-      position: absolute;
-      background-color: rgb(46, 71, 218);;
-      width: 100%;
-      height: 48vh;
-      margin-top: 112%;
-      color: white;
-    }
-
-    .div-footer{
-      position: relative;
-    }
-
-    .subir-formaspagamento div{
-      margin-left: 4%;
-    }
-
-    .formas-pagamento-linha{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .formas-pagamento-coluna{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .formas-pagamento-coluna h3{
-      margin-left: 8%;
-      margin-top: 0;
-    }
-
-    .radio-pagamento{
-      width: 100%;
-    }
-
-    .radio-pagamento input{
-      padding: 5%;
-      width: 100px;
-      height: 1.8rem;
-      margin-top: 70%;
-    }
-
-    .agendados{
-      border-radius: 10px;
-      background-color: black;
-      color: white;
-      border: 1px solid black;
-      padding: 2%;
-      width: 24%;
-      font-size: 1rem;
-      margin-left: 0;
-    }
-
-    .outras-formas-pagamentos {
-      font-size: 0.9rem;
-    }
-
-    .bolinha-pagamento{
-      width: 100%;
-    }
-
-    .bolinha-pagamento input{
-      padding: 5%;
-      width: 100px;
-      height: 1.9rem;
-      margin-left: 72%;
-      margin-top: -100%;
-    }
-
-    .pagar-final{
-      background-color: black;
-      color: white;
-      width: 60%;
-      padding: 2%;
-      font-size: 1.2rem;
-      margin-left: 20%;
-      border-radius: 15px;
-      
-    }
-
-    /*Perfil do usuário */
-    .voltar-perfil-usuario{
-      width: 100%;
-    }
-
-    .voltar-perfil-usuario img{
-      width: 12%;
-      margin-top: 2%;
-      margin-left: 4%;
-    }
-
-    .foto-perfil-usuario{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-    }
-
-    .nome-perfil-usuario{
-      color: white;
-    }
-
-    .icone-perfil-usuario{
-      width: 50%;
-    }
-
-    .icone-perfil-usuario img{
-      width: 100%;
-    }
-
-    .descricao-perfil-usuario{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-      width: 80%;
-      margin-left: 5%;
-      margin-right: 5%;
-      margin-top: 4%
-    }
-
-    .nome-usuario{
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 8%;
-    }
-
-    .nome-usuario img{
-      width: 20%;
-      margin-right: 5%  ;
-    }
-    
-    .nome-usuario h2{
-      margin-bottom: 0;
-    }
-
-    .editar-perfil-usuario{
-      width: 20%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 8%;
-    }
-
-    .editar-perfil-usuario img{
-      width: 50%;
-      margin-bottom: 62%;
-    }
-
-    .perfil-usuario-flex{
-      display: flex;
-      flex-direction: row;
-    }
-
-    .botao-perfil-usuario{
-      color: white;
-      padding: 4%;
-      background-color: rgb(14, 54, 175);
-      border: 2px solid white;
-      width: 50%;
-      border-radius: 30px;
-      font-size: 1.4rem;
-      margin-left: 25%;
-      margin-top: 4%;
-      margin-bottom: 3%;
-    }
-
-    /*Viagens do motorista */
-    .texto-cima-viagens{
-      display: flex;
-      flex-direction: row;
-      margin-top: -10%;
-      margin-left: 2%;
-    }
-
-    .texto-cima-viagens p{
-      margin-left: 6%;
-      margin-top: 8%;
-    }
-
-    .passageiro-viagem{
-      display: flex;
-      flex-direction: row;
-      width: 50%;
-      border-bottom: 4px solid black;
-      margin-left: 6%;
-      padding-bottom: 4%;
-      padding-right: 14%;
-      margin-top: 8%;
-    }
-
-    .passageiro-viagem img{
-      width: 30%;
-    }
-
-    .viagem-coluna{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mapa-viagem{
-      width: 100%;
-      margin-right: -15%; 
-      margin-top: -2%;   
-    }
-
-    .mapa-viagem img{
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .viagem{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 15%;
-    }
-
-    /*Motorista mudou o valor */
-    .pagar-novo-preco{
-      background-color: rgb(14, 54, 175); ;
-      padding: 4%;
-      color: white;
-      width: 500%;
-      border-radius: 15px;
-      margin-left: -175%;
-    }
-
-    /*Buscar produtos */
-    .produto-flex{
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 5%;
-    }
-
-    .header-topo{
-      justify-content: space-between;
-    }
-
-    .produto-flex button{
-      background-color: rgb(14, 54, 175); ;
-      color: white;
-      border-radius: 15px;
-      padding: 4%;
-      width: 110%;
-    }
-
-    /*Compra de Produto */
-    .nome-produto{
-      margin-left: 4%;
-    }
-
-    .produto-destacado{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 14%;
-      margin-left: 8%;
-    }
-
-    .estrelas-produto{
-      width: 15%;
-      display: flex;
-      flex-direction: row;
-      margin-left: 4%;
-    }
-
-    .estrelas-produto img{
-      width: 50%;
-    }
-
-    .quantidade-do-produto{
-      margin-top: 15%;
-      display: flex;
-      justify-content: center;
-      font-size: 1.2rem;
-      margin-left: 10%;
-      margin-bottom: 10%;
-    }
-
-    .selecionar-produto{
-      width: 40%;
-      margin-left: 20%;
-    }
-
-    .selecionar-produto button{
-      background-color: rgb(14, 54, 175);;
-      padding: 3%;
-      color: white;
-      width: 80%;
-      font-size: 1.2rem;
-      border-radius: 15px;
-    }
-
-    /*Resumo do Pedido */
-    .motorista-resumo-pedido{
-      display: flex;
-      flex-direction: row;
-      width: 20%;
-    }
-
-    .motorista-resumo-pedido img{
-      width: 100%;
-    }
-
-    .resumo-pedido{
-      display: flex;
-      flex-direction: row;
-      border-bottom: 2px solid black;
-      width: 100%;
-      padding-bottom: 8%;
-    }
-
-    .imagem-resumo-pedido{
-      width: 100%;
-      margin-left: 5%;
-    }
-
-    .imagem-resumo-pedido img{
-      width: 110%;
-      height: 90%;
-      border-radius: 15px;
-    }
-
-    .detalhes-resumo-pedido{
-      margin-left: 8%;
-      margin-top: -5%;
-    }
-
-    .detalhes-resumo-pedido h1{
-      font-size: 1.8rem;
-    }
-
-    .produto-resumo{
-      width: 30%;
-      margin-top: 10%;
-      margin-left: 4%;
-    }
-
-    .fechar-pedido{
-      width: 50%;
-      margin-left: 18%;
-    }
-
-    .fechar-pedido button{
-      background-color: rgb(14, 54, 175);;
-      padding: 3%;
-      color: white;
-      width: 80%;
-      font-size: 1.2rem;
-      border-radius: 15px;
-    }
-
-    .subtotal-resumo{
-      margin-bottom: 30%;
-      margin-left: 4%;
-    }
-
-    /*Endereço de Entregas */
-    .endereco-entrega-produtos{
-      width: 100%;
-      margin-bottom: 20%;
-    }
-
-    .endereco-entrega-produtos input{
-      padding: 4%;
-      font-size: 1.2rem;
-      width: 90%;
-      margin-bottom: 10%;
-      border: 2px solid black;
-      margin-left: 5%;
-    }
-
-    .usar-endereco{
-      width: 60%;
-      margin-left: 18%;
-    }
-
-    .usar-endereco button{
-      background-color: rgb(14, 54, 175);;
-      padding: 3%;
-      color: white;
-      width: 80%;
-      font-size: 1.2rem;
-      border-radius: 15px;
-    }
-
-    /* Entrega solicitada */
-    .destinatario{
-      display: flex;
-      flex-direction: row;
-      margin-left: 5%;
-    }
-
-    .destinatario img{
-      width: 18%;
-      margin-bottom: 6%;
-    }
-
-    .espaco-data{
-      margin-left: 5%;
-    }
-
-    .pedido{
-      margin-left: 5%;
-      margin-top: 15%;
-    }
-
-    .detalhes-pedido{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-
-    .detalhes-pedido span{
-      font-size: 1.6rem;
-      color: black;
-    }
-
-    .detalhes-pedido img{
-      width: 50%;
-      margin-right: 5%;
-      margin-left: 5%;
-    }
-
-    /* serviços */
-    .icone-servico{
-        width: 15%;
-        background-color: rgb(112, 163, 245);
-        margin-top: 10%;
-        margin-left: 10%;
-        border-radius: 0.8rem;
-        padding: 2%;
-        margin-right: 6%;
-        cursor: pointer;
-    
-    }
-
-    .icone-servico img{
-      width: 100%;
-    }
-
-    .distancia{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 85vh;
-    }
-
-    .ativo{
-      background-color: #0e1f6b;
-    }
-
-  /* escolher local no mapa */
-  .imagem-mapa{
-    width: 100%;
+    align-items: center;
     height: 100vh;
+    background-color: #ecf0f1;
+}
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    display: flex;
-  }
-  .imagem-mapa img{
-    width: 100%;
-    height: 100%;
-  }
-  .barra p{
- 
-    margin-left: 5%;
-    }
-
-  .barra-2{
+}
+.content::before {
+    content: "";
     position: absolute;
-    top: 0;
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .calendario input{
-    background-color: rgb(112, 163, 245);
-  }
-  .localizacao{
-    position: absolute;
-    top: 0;
-    margin-top: 40%;
-  }
-  .localizacao img{
-    width: 60%;
-  }
-  .botao-mapa{
-    position: absolute;
-    top: 0;
-    margin-top: 170%;
-    justify-content: center;
-    margin-left: -1%;
-  }
-  .imagem-mapa{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-  }
-  .imagem-mapa img{
-    width: 100%;
-    height: 100%;
-  }
-
-
-
-  .calendario input{
-    background-color: rgb(112, 163, 245);
-  }
-  .localizacao{
-    position: absolute;
-    top: 0;
-    margin-top: 40%;
-  }
-  .localizacao img{
-    width: 60%;
-  }
-  
-
-  /* calendario */
-  input[type="datetime-local"] {
-    position: relative;
+    background-color: #58af9b;
     width: 40%;
-    background-color: rgb(112, 163, 245);;
-}
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 
-input[type="datetime-local"]:after {
-    content: "\25BC"; 
-    color: #555;
+
+    left: 0;
+}
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primary {
+    color: #fff;
+}
+.title-second {
+    color: #58af9b;
+}
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.description-primary {
+    color: #fff;
+}
+.description-second {
+    color: #7f8c8d;
+}
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #58af9b;
+}
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+}
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+.first-content {
+    display: flex;
+}
+.first-content .second-column {
+    z-index: 11;
+}
+.first-column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.second-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-media {
+    margin: 1rem 0;
+}
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+.link-social-media .item-social-media {
+    transition: background-color .1s;
+}
+.link-social-media:hover .item-social-media{
+    background-color: #58af9b;
+    color: #fff;
+    border-color: #58af9b;
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.icon-modify {
+    color: #7f8c8d;
     padding: 0 5px;
 }
 
+/* second content*/
 
-input[type="datetime-local"]:hover:after {
-    color: #bf1400;
-}
-input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+.second-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    color: transparent;
-    background: transparent;
+    display: flex;
+}
+.second-content .first-column {
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column {
+    order: 1;
+    z-index: -1;
+}
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.password::first-letter {
+    text-transform: capitalize;
 }
 
 
-input[type="datetime-local"]::-webkit-inner-spin-button {
-    z-index: 1;
+
+.sign-in-js .first-content .first-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+.sign-in-js .second-content .first-column {
+    z-index: 13;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.3s; /MODIFIQUEI DE 3s PARA 1.3s/
+
+    z-index: 12;
+}
+
+.sign-up-js .content::before {
+    animation: slideout 1s; /MODIFIQUEI DE 3s PARA 1.3s/
+
+    z-index: 12;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+    z-index: 11;
+}
+
+.sign-up-js .first-content .first-column {
+    z-index: 13;    
 }
 
 
- input[type="datetime-local"]::-webkit-clear-button {
-     z-index: 1;
- }
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+.sign-in-js .first-content .second-column {
+
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s; /MODIFIQUEI DE 3s PARA 1.3s/
+}
+
+.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s; /MODIFIQUEI DE 3s PARA 1.3s/
+}
+
+/ANIMAÇÃOO CSS PARA O CONTEÚDO/
+
+@keyframes deslocamentoEsq {
+
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .5;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
 
 
-  
+@keyframes deslocamentoDir {
+
+    from {
+        left: 0;
+        z-index: 12;
+    }
+
+    25% {
+        left: 80px;
+        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+    }
+
+    50% {
+        left: 100px;
+        /* z-index: 12; NÃO HÁ NECESSIDADE*/
+        /* background-color: yellow;  Exemplo que dei no vídeo*/
+    }
+
+    to {
+        left: 110px;
+        z-index: -1;
+    }
+}
 
 
+/ANIMAÇÃO CSS/
+
+@keyframes slidein {
+
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+
+/VERSÃO MOBILE/
+@media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .first-content, .second-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .first-column, .second-column {
+        width: 100%;
+    }
+    
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+
+    }
+
+    .form {
+        width: 90%;
+    }
+    
+    /* ANIMAÇÃO MOBILE CSS*/
+
+    @keyframes deslocamentoEsq {
+
+        from {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -80px;
+            opacity: .5;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        50% {
+            top: -100px;
+            opacity: .2;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        to {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    
+    @keyframes deslocamentoDir {
+    
+        from {
+            top: 0;
+            z-index: 12;
+        }
+    
+        25% {
+            top: 80px;
+            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+        }
+    
+        50% {
+            top: 100px;
+            /* z-index: 12; NÃO HÁ NECESSIDADE*/
+            /* background-color: yellow;  Exemplo que dei no vídeo*/
+        }
+    
+        to {
+            top: 110px;
+            z-index: -1;
+        }
+    }
+    
+    
+    
+    @keyframes slidein {
+    
+        from {
+            top: 0;
+            height: 40%;
+        }
+    
+        25% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideout {
+    
+        from {
+            top: 60%;
+            height: 40%;
+        }
+    
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        to {
+            top: 0;
+            height: 40%;
+        }
+    }
    
+}
 
+@media screen and (max-width: 740px) {
+    .form {
+        width: 50%;
+    }
+}
 
- 
+@media screen and (max-width: 425px) {
+    .form {
+        width: 100%;
+    }
+}
