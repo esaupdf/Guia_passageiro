@@ -1,13 +1,16 @@
+// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCN81xPJLHv36xqcgelTubqQAmipn9iu2E",
-  authDomain: "guia-passageiro-38e3c.firebaseapp.com",
-  projectId: "guia-passageiro-38e3c",
-  storageBucket: "guia-passageiro-38e3c.appspot.com",
-  messagingSenderId: "847813698216",
-  appId: "1:847813698216:web:3e9c6eea42956ddbff589d"
+    authDomain: "guia-passageiro-38e3c.firebaseapp.com",
+    projectId: "guia-passageiro-38e3c",
+    storageBucket: "guia-passageiro-38e3c.appspot.com",
+    messagingSenderId: "847813698216",
+    appId: "1:847813698216:web:3e9c6eea42956ddbff589d"
   };
   
-  firebase.initializeApp(firebaseConfig);
+
+// Inicializando o Firebase
+firebase.initializeApp(firebaseConfig);
 
 // Referência ao provedor de autenticação do Google
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -22,7 +25,7 @@ function loginWithGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then((result) => {
             const user = result.user;
-            window.location.href = "../inicial.html"; 
+            window.location.href = "../inicial.html"; // Redirecionamento corrigido
         })
         .catch((error) => {
             console.error(error);
