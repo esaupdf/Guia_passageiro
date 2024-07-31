@@ -25,7 +25,7 @@ function loginWithGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then((result) => {
             const user = result.user;
-            window.location.href = "../inicial.html"; 
+            window.location.href = "inicial.html"; 
         })
         .catch((error) => {
             console.error(error);
