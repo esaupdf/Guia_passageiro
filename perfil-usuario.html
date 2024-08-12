@@ -6,70 +6,103 @@
     <title>Perfil do usuário</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="body-azulao" class="body-inicial">
-    <header><div class="voltar-perfil-usuario">
-    <a href="inicial.html">
-     <img src="imagens/voltar.png">
-    </a>
-    </div>
-    
-    <div class="foto-perfil-usuario">
-        <div class="nome-perfil-usuario">
-            <h1>Perfil</h1>
+<body class="body-azulao body-inicial">
+    <header>
+        <div class="voltar-perfil-usuario">
+            <a href="inicial.html">
+                <img src="imagens/voltar.png" alt="Voltar">
+            </a>
         </div>
-
-        <div class="icone-perfil-usuario">
-            <img src="imagens/usuario-perfil.png" alt="">
+        <div class="foto-perfil-usuario">
+            <div class="nome-perfil-usuario">
+                <h1>Perfil</h1>
+            </div>
+            <div class="icone-perfil-usuario">
+                <!-- Imagem de perfil do usuário -->
+                <img id="userProfileImage" src="imagens/perfil-usuario.png" alt="Perfil do Usuário">
+            </div>
         </div>
-    </div>
     </header>
     
-    <main>  
-    <div class="perfil-usuario-flex">
-
-    <div class="descricao-perfil-usuario">
-
-        <div class="nome-usuario">
-            <img src="imagens/perfil-usuario.png    " alt="">
-            <h2>Nome</h2>
+    <main>
+        <div class="perfil-usuario-flex">
+            <div class="descricao-perfil-usuario">
+                <div class="nome-usuario">
+                    <img src="imagens/perfil-usuario.png" alt="Nome">
+                    <h2 id="userName">Nome</h2>
+                    <!-- Ícone de lápis para editar o nome -->
+                    <img src="imagens/lapis.png" alt="Editar Nome" class="editar-nome" onclick="editName()">
+                </div>
+                <div class="nome-usuario">
+                    <img src="imagens/gmail.png" alt="Email">
+                    <h2 id="userEmail">Nome@gmail.com</h2>
+                </div>
+                <div class="nome-usuario">
+                    <img src="imagens/chave-removebg-preview.png" alt="Senha">
+                    <h2>..........</h2>
+                </div>
+                <div class="nome-usuario">
+                    <img src="imagens/telefone-removebg-preview.png" alt="Telefone">
+                    <h2>(88) 8888-8888</h2>
+                </div>
+            </div>
         </div>
-
-        <div class="nome-usuario">
-            <img src="imagens/gmail.png" alt="">
-            <h2>Nome@gmail.com</h2>
-        </div>
-
-        <div class="nome-usuario">
-            <img src="imagens/chave-removebg-preview.png" alt="">
-            <h2>..........</h2>
-        </div>
-
-        <div class="nome-usuario">
-            <img src="imagens/telefone-removebg-preview.png" alt="">
-            <h2>(88) 8888-8888</h2>
-        </div>
-
-    </div>
-
-    <div class="editar-perfil-usuario">
-        <img src="imagens/lapis.png">
-        <img src="imagens/lapis.png">
-        <img src="imagens/lapis.png">
-        <img src="imagens/lapis.png">
-    </div>
-
-    </div>
-
-    <button class="botao-perfil-usuario">Sair</button>
+        <button class="botao-perfil-usuario" onclick="logout()">Sair</button>
     </main>
-
+    
     <footer>
         <div class="div-footer">
-          <a href="inicial.html"><img src="imagens/home-removebg-preview.png" alt="botao-de-inicio"></a>
-          <a href="conversas.html"><img src="imagens/chat-removebg-preview.png" alt="chat"></a>
-          <a href="servicos.html"><img src="imagens/sla-removebg-preview.png" alt="lista-de-controle"></a>
-          <a class="ativo" href="perfil-usuario.html"><img src="imagens/perfil-usuario.png  " alt="pessoa"></a>
-         </div>
-      </footer>
+            <a href="inicial.html"><img src="imagens/home-removebg-preview.png" alt="Botão de Início"></a>
+            <a href="conversas.html"><img src="imagens/chat-removebg-preview.png" alt="Chat"></a>
+            <a href="servicos.html"><img src="imagens/sla-removebg-preview.png" alt="Lista de Controle"></a>
+            <a class="ativo" href="perfil-usuario.html"><img src="imagens/perfil-usuario.png" alt="Perfil do Usuário"></a>
+        </div>
+    </footer>
+
+    <!-- Script para atualizar a imagem e nome do perfil -->
+    <script>
+        window.onload = function() {
+            const userPhotoURL = localStorage.getItem('userPhotoURL');
+            const userName = localStorage.getItem('userName');
+            const userEmail = localStorage.getItem('userEmail');
+
+            if (userPhotoURL) {
+                const perfilUsuarioImg = document.getElementById('userProfileImage');
+                if (perfilUsuarioImg) {
+                    perfilUsuarioImg.src = userPhotoURL;
+                }
+            }
+
+            if (userName) {
+                const userNameElement = document.getElementById('userName');
+                if (userNameElement) {
+                    userNameElement.textContent = userName;
+                }
+            }
+
+            if (userEmail) {
+                const userEmailElement = document.getElementById('userEmail');
+                if (userEmailElement) {
+                    userEmailElement.textContent = userEmail;
+                }
+            }
+        };
+
+        function editName() {
+            const newName = prompt('Digite o novo nome:');
+            if (newName) {
+                localStorage.setItem('userName', newName);
+                document.getElementById('userName').textContent = newName;
+            }
+        }
+
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = "index.html"; 
+            }).catch((error) => {
+                console.error('Erro ao sair:', error);
+            });
+        }
+    </script>
 </body>
 </html>
