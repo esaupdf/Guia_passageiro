@@ -1,4 +1,3 @@
-// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCN81xPJLHv36xqcgelTubqQAmipn9iu2E",
     authDomain: "guia-passageiro-38e3c.firebaseapp.com",
@@ -6,8 +5,7 @@ const firebaseConfig = {
     storageBucket: "guia-passageiro-38e3c.appspot.com",
     messagingSenderId: "847813698216",
     appId: "1:847813698216:web:3e9c6eea42956ddbff589d"
-  };
-  
+};
 
 // Inicializando o Firebase
 firebase.initializeApp(firebaseConfig);
@@ -25,6 +23,10 @@ function loginWithGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then((result) => {
             const user = result.user;
+            // Armazenar a URL da foto e o nome do usuário no localStorage
+            localStorage.setItem('userPhotoURL', user.photoURL);
+            localStorage.setItem('userName', user.displayName);
+            localStorage.setItem('userEmail', user.email);
             window.location.href = "inicial.html"; 
         })
         .catch((error) => {
