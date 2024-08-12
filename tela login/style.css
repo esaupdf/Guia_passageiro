@@ -492,3 +492,55 @@ input:-webkit-autofill {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Centralizando o conteúdo da coluna esquerda */
+.first-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* Centralizando os ícones das redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.list-social-media {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-social-media {
+    margin: 0 5px; /* Espaçamento entre os ícones */
+}
+
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
