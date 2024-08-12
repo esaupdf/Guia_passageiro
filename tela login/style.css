@@ -513,3 +513,126 @@ input:-webkit-autofill
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+/* Estilos básicos para o container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Flexbox para a disposição das colunas */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Ajustes de estilo para cada coluna */
+.first-column, .second-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos adicionais */
+h2.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p.description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input {
+    margin-bottom: 15px;
+}
+
+.label-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item-social-media {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .first-column, .second-column {
+        width: 100%;
+    }
+
+    h2.title {
+        font-size: 20px;
+    }
+
+    p.description {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2.title {
+        font-size: 18px;
+    }
+
+    p.description {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .label-input input {
+        font-size: 12px;
+    }
+
+    .item-social-media {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
