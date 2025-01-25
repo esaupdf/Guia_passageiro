@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços</title>
+    <title>Inicial Cliente</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Estilos gerais */
+        /* Estilos para manter a cor original da tela */
         body {
             background-color: #ecf0f1;
             font-family: 'Arial', sans-serif;
             margin: 0;
+            padding-bottom: 60px; /* Espaço para o rodapé em dispositivos móveis */
         }
 
         .header-inicial {
@@ -23,21 +24,35 @@
             font-weight: bold;
         }
 
-        /* Ícones e seus nomes */
-        .itens {
+        /* Formulário de pesquisa */
+        .search-container {
             display: flex;
             justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* Ícones e seus nomes - Ajuste para centralizar horizontalmente */
+        .itens {
+            display: flex;
+            justify-content: center; /* Alinha os itens no centro */
             gap: 20px;
-            width: 100%;
             margin-bottom: 30px;
             flex-wrap: wrap;
-            justify-content: space-evenly;
             align-items: center; /* Alinha os itens verticalmente */
         }
 
-        .icone-servico {
+        .icone {
             text-align: center;
-            width: 80px; 
+            width: 80px;
             height: 80px;
             display: flex;
             flex-direction: column;
@@ -51,17 +66,17 @@
             border: 2px solid transparent;
         }
 
-        .icone-servico:hover {
-            transform: scale(1.1); 
+        .icone:hover {
+            transform: scale(1.1);
         }
 
-        .icone-servico img {
+        .icone img {
             width: 40px;
             height: 40px;
             margin-bottom: 8px;
         }
 
-        .nomes-01 {
+        .nomes {
             text-align: center;
             font-size: 12px;
             color: #333;
@@ -74,19 +89,24 @@
                 flex-direction: column;
             }
 
-            .icone-servico {
+            .icone {
                 width: 60px;
                 height: 60px;
                 padding: 5px;
             }
 
-            .icone-servico img {
+            .icone img {
                 width: 30px;
                 height: 30px;
             }
 
-            .nomes-01 {
+            .nomes {
                 font-size: 10px;
+            }
+
+            /* Ajuste do rodapé para telas pequenas */
+            body {
+                padding-bottom: 90px; /* Aumenta o espaçamento no rodapé */
             }
         }
 
@@ -116,40 +136,40 @@
         }
     </style>
 </head>
-<body>
+<body class="body-inicial">
 
     <header class="header-inicial">
-        <h1>Serviços</h1>
+        <h1>Guia Passageiro</h1>
     </header>
 
-    <div class="distancia">
-        <div class="servicos">
-            <div class="itens">
-                <div class="icone-servico">
-                    <a href="compras.html">
-                        <img src="imagens/compras-online (1).png" alt="Compras">
-                    </a>
-                </div>
+    <main>
+        <form class="search-container">
+            <input type="text" id="search-bar" placeholder="Destino">
+        </form>
 
-                <div class="icone-servico">
-                    <a href="">
-                        <img src="imagens/turismo.png" alt="Turismo">
-                    </a>
-                </div>
+        <!-- Ícones centralizados na tela -->
+        <div class="itens">
+            <div class="icone">
+                <a href="mapa-agendar.html">
+                    <img src="imagens/calendario (1).png" alt="Agendar">
+                </a>
+                <div class="nomes">Agendar</div>
             </div>
 
-            <div class="nomes-01">
-                <p>Compras</p>
-                <p>Turismo</p>
+            <div class="icone">
+                <a href="pagamentos.html">
+                    <img src="imagens/cifrao (1).png" alt="Pagamento">
+                </a>
+                <div class="nomes">Pagamento</div>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="div-footer">
             <a href="inicial-cliente.html"><img src="imagens/home-removebg-preview.png" alt="Início"></a>
             <a href="conversas.html"><img src="imagens/chat-removebg-preview.png" alt="Chat"></a>
-            <a class="ativo" href="servicos.html"><img src="imagens/sla-removebg-preview.png" alt="Serviços"></a>
+            <a href="servicos.html"><img src="imagens/sla-removebg-preview.png" alt="Serviços"></a>
             <a href="perfil-usuario-cliente.html"><img src="imagens/perfil-usuario.png" alt="Perfil"></a>
         </div>
     </footer>

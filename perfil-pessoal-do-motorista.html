@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Motorista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #58af9b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .perfil-info {
+            background-color: white;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .perfil-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .perfil-info h2 {
+            color: #333;
+        }
+
+        .perfil-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #58af9b;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #45a089;
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+            }
+
+            .perfil-info {
+                width: 90%;
+            }
+
+            footer {
+                padding: 20px 0;
+            }
+
+            footer a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Perfil do Motorista</h1>
+    </div>
+
+    <div class="content">
+        <div class="perfil-info">
+            <img src="imagens/imagem-perfil.png" alt="Foto do Motorista">
+            <h2>Motorista Nome</h2>
+            <p>Descrição do motorista e informações adicionais.</p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="inicial-motorista.html"><img src="imagens/home-removebg-preview.png" alt="Início"></a>
+        <a href="conversas-motorista.html"><img src="imagens/chat-removebg-preview.png" alt="Conversas"></a>
+        <a href="perfil-pessoal-do-motorista.html"><img src="imagens/perfil-usuario.png" alt="Perfil"></a>
+    </footer>
+
+</body>
+</html>

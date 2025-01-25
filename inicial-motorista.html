@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial Motorista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #58af9b; /* Verde */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .itens {
+            display: flex;
+            justify-content: center; /* Alinha os ícones no centro */
+            gap: 20px; /* Espaço entre os ícones */
+            width: 100%;
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte em telas menores */
+            justify-content: space-evenly; /* Distribui os ícones igualmente */
+        }
+
+        .icone {
+            text-align: center;
+            width: 80px; /* Ajuste para o tamanho do ícone */
+            height: 80px; /* Ajuste para o tamanho do ícone */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #58af9b; /* Borda verde */
+            border-radius: 10px;
+            padding: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+            transition: transform 0.3s ease;
+        }
+
+        .icone:hover {
+            transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+        }
+
+        .icone img {
+            width: 40px; /* Tamanho do ícone */
+            height: 40px;
+            margin-bottom: 8px;
+        }
+
+        .nomes {
+            text-align: center;
+            font-size: 12px; /* Ajuste para o tamanho do texto */
+            color: #333;
+        }
+
+        footer {
+            background-color: #58af9b; /* Verde */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #45a089;
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+            }
+
+            .itens {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px; /* Menor espaço em telas menores */
+            }
+
+            .icone {
+                width: 70px; /* Ajuste para telas menores */
+                height: 70px;
+                padding: 6px;
+            }
+
+            .icone img {
+                width: 30px; /* Ajuste do tamanho do ícone */
+                height: 30px;
+            }
+
+            footer {
+                padding: 20px 0;
+            }
+
+            footer a {
+                margin: 0 10px;
+            }
+        }
+
+        /* Responsividade extra para telas muito pequenas */
+        @media (max-width: 480px) {
+            .icone {
+                width: 60px;
+                height: 60px;
+                padding: 5px;
+            }
+
+            .icone img {
+                width: 25px;
+                height: 25px;
+            }
+
+            footer {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>GUIA PASSAGEIRO - MOTORISTA</h1>
+    </div>
+
+    <div class="content">
+        <div class="itens">
+            <div class="icone">
+                <a href="viagens-do-motorista.html"><img src="imagens/V.png" alt="Viagens"></a>
+                <div class="nomes">
+                    <p>Viagem</p>
+                </div>
+            </div>
+
+            <div class="icone">
+                <a href="pagamentos.html"><img src="imagens/cifrao (1).png" alt="Pagamento"></a>
+                <div class="nomes">
+                    <p>Pagamento</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="inicial-motorista.html"><img src="imagens/home-removebg-preview.png" alt="Início"></a>
+        <a href="conversas-motorista.html"><img src="imagens/chat-removebg-preview.png" alt="Conversas"></a>
+        <a href="perfil-pessoal-do-motorista.html"><img src="imagens/perfil-usuario.png" alt="Perfil"></a>
+    </footer>
+
+</body>
+</html>

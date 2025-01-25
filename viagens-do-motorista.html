@@ -4,7 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suas viagens</title>
-    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+
+        .header-topo {
+            background-color: #58af9b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .suas-viagens {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .viagem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .viagem:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .viagem-coluna {
+            padding: 15px;
+        }
+
+        .texto-cima-viagens h2 {
+            color: #58af9b;
+            margin: 0;
+        }
+
+        .texto-cima-viagens p {
+            margin: 5px 0 0;
+            color: #7f8c8d;
+        }
+
+        .passageiro-viagem {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .passageiro-viagem img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .passageiro-viagem p {
+            margin: 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .mapa-viagem img {
+            width: 120px;
+            height: auto;
+        }
+
+        /* Links gerais */
+        .link-chat {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
     <header class="header-topo">
@@ -13,72 +95,71 @@
 
     <div class="suas-viagens">
 
-        <a class="link-chat" href="viagem-visao-do-motorista.html"> <div class="viagem">
+        <a class="link-chat" href="viagem-visao-do-motorista.html">
+            <div class="viagem">
 
-            <div class="viagem-coluna">
- 
-        <div class="texto-cima-viagens">
-        <h2>Solicitada</h2>
-        <p>Abril 30, 10:00 AM</p>
-        </div>
+                <div class="viagem-coluna">
+                    <div class="texto-cima-viagens">
+                        <h2>Solicitada</h2>
+                        <p>Abril 30, 10:00 AM</p>
+                    </div>
 
-        <div class="passageiro-viagem">
-            <img src="imagens/imagem-perfil.png" alt="">
-            <p>Heleonardo</p>
-        </div>
+                    <div class="passageiro-viagem">
+                        <img src="imagens/imagem-perfil.png" alt="">
+                        <p>Heleonardo</p>
+                    </div>
+                </div>
 
-            </div>
-
-            <div class="mapa-viagem">
-                <img src="imagens/mapa-destino.png">
-            </div>
-
-        </div> </a>
-
-        <a class="link-chat" href=""> <div class="viagem">
-
-            <div class="viagem-coluna">
- 
-        <div class="texto-cima-viagens">
-        <h2>Solicitada</h2>
-        <p>Abril 30, 10:00 AM</p>
-        </div>
-
-        <div class="passageiro-viagem">
-            <img src="imagens/imagem-perfil.png" alt="">
-            <p>Passageiro</p>
-        </div>
+                <div class="mapa-viagem">
+                    <img src="imagens/mapa-destino.png" alt="Mapa de destino">
+                </div>
 
             </div>
+        </a>
 
-            <div class="mapa-viagem">
-                <img src="imagens/mapa-destino.png">
+        <a class="link-chat" href="">
+            <div class="viagem">
+
+                <div class="viagem-coluna">
+                    <div class="texto-cima-viagens">
+                        <h2>Solicitada</h2>
+                        <p>Abril 30, 10:00 AM</p>
+                    </div>
+
+                    <div class="passageiro-viagem">
+                        <img src="imagens/imagem-perfil.png" alt="">
+                        <p>Passageiro</p>
+                    </div>
+                </div>
+
+                <div class="mapa-viagem">
+                    <img src="imagens/mapa-destino.png" alt="Mapa de destino">
+                </div>
+
             </div>
+        </a>
 
-        </div> </a>
+        <a class="link-chat" href="">
+            <div class="viagem">
 
+                <div class="viagem-coluna">
+                    <div class="texto-cima-viagens">
+                        <h2>Solicitada</h2>
+                        <p>Abril 30, 10:00 AM</p>
+                    </div>
 
-        <a class="link-chat" href=""> <div class="viagem">
+                    <div class="passageiro-viagem">
+                        <img src="imagens/imagem-perfil.png" alt="">
+                        <p>Passageiro</p>
+                    </div>
+                </div>
 
-            <div class="viagem-coluna">
- 
-        <div class="texto-cima-viagens">
-        <h2>Solicitada</h2>
-        <p>Abril 30, 10:00 AM</p>
-        </div>
-
-        <div class="passageiro-viagem">
-            <img src="imagens/imagem-perfil.png" alt="">
-            <p>Passageiro</p>
-        </div>
+                <div class="mapa-viagem">
+                    <img src="imagens/mapa-destino.png" alt="Mapa de destino">
+                </div>
 
             </div>
-
-            <div class="mapa-viagem">
-                <img src="imagens/mapa-destino.png">
-            </div>
-
-        </div> </a>
+        </a>
 
     </div>
     

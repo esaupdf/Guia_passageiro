@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Motorista - Veículo e Documentos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-cadastro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header-cadastro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-cadastro h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .header-cadastro p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .form-cadastro {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-cadastro label {
+            display: block;
+            font-size: 14px;
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+
+        .form-cadastro input, .form-cadastro select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dcdfe6;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #f9fbfc;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-cadastro input:focus, .form-cadastro select:focus {
+            border-color: #58af9b;
+            outline: none;
+        }
+
+        .form-cadastro button {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #58af9b;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-cadastro button:hover {
+            background-color: #45a089;
+        }
+
+        .link-voltar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-voltar a {
+            font-size: 14px;
+            color: #58af9b;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .link-voltar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-cadastro">
+        <div class="header-cadastro">
+            <h1>Cadastro de Motorista</h1>
+            <p>Preencha as informações do veículo e documentos.</p>
+        </div>
+        <form class="form-cadastro" onsubmit="finalizarCadastro(event)">
+            <label for="tipo-veiculo">Tipo de Veículo</label>
+            <select id="tipo-veiculo" name="tipo-veiculo" required>
+                <option value="">Selecione...</option>
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+            </select>
+
+            <div id="carro-select" style="display: none;">
+                <label for="carro">Escolha seu carro</label>
+                <select id="carro" name="carro">
+                    <!-- As opções serão carregadas aqui -->
+                </select>
+            </div>
+
+            <label for="placa">Placa do Veículo</label>
+            <input type="text" id="placa" name="placa" placeholder="Digite a placa" required>
+
+            <label for="documento">Documento do Veículo</label>
+            <input type="text" id="documento" name="documento" placeholder="Digite o documento" required>
+
+            <button type="submit">Finalizar</button>
+        </form>
+
+        <div class="link-voltar">
+            <p><a href="cadastro-motorista.html">Voltar</a></p>
+        </div>
+    </div>
+
+    <!-- Inclusão do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCN81xPJLHv36xqcgelTubqQAmipn9iu2E",
+            authDomain: "guia-passageiro-38e3c.firebaseapp.com",
+            databaseURL: "https://guia-passageiro-38e3c-default-rtdb.firebaseio.com/",
+            projectId: "guia-passageiro-38e3c",
+            storageBucket: "guia-passageiro-38e3c.appspot.com",
+            messagingSenderId: "847813698216",
+            appId: "1:847813698216:web:3e9c6eea42956ddbff589d"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Função para carregar os carros do Firebase
+        function carregarCarros() {
+            const carrosRef = firebase.database().ref('carros'); // Referência para a coleção 'carros'
+            const carroSelect = document.getElementById('carro');  // O select de carros
+
+            carrosRef.once('value', function(snapshot) {
+                // Limpa as opções antigas
+                carroSelect.innerHTML = "<option value=''>Selecione um carro</option>";
+
+                snapshot.forEach(function(childSnapshot) {
+                    const carro = childSnapshot.val();  // Pega os dados do carro
+                    const option = document.createElement('option');  // Cria uma nova opção
+                    option.value = childSnapshot.key;  // A chave do carro será o valor da opção
+                    option.textContent = carro.nome;  // O nome do carro será o texto da opção
+                    carroSelect.appendChild(option);  // Adiciona a opção no select
+                });
+            });
+        }
+
+        // Função para mostrar ou esconder o select de carros baseado no tipo de veículo
+        document.getElementById('tipo-veiculo').addEventListener('change', function(event) {
+            const carroSelectDiv = document.getElementById('carro-select');
+            if (event.target.value === 'carro') {
+                carroSelectDiv.style.display = 'block';  // Exibe a seleção de carros
+                carregarCarros();  // Carrega os carros
+            } else {
+                carroSelectDiv.style.display = 'none';  // Esconde a seleção de carros
+            }
+        });
+
+        // Chama a função para carregar os carros quando a página carrega
+        window.onload = function() {
+            carregarCarros();  // Carrega os carros do Firebase
+        };
+    </script>
+</body>
+</html>

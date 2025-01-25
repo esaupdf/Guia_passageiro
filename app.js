@@ -1,3 +1,4 @@
+// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCN81xPJLHv36xqcgelTubqQAmipn9iu2E",
     authDomain: "guia-passageiro-38e3c.firebaseapp.com",
@@ -13,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 // Referência ao provedor de autenticação do Google
 const provider = new firebase.auth.GoogleAuthProvider();
 
-// Configuração para forçar o usuário a escolher uma conta toda vez
+// Forçar o usuário a escolher uma conta toda vez
 provider.setCustomParameters({
     prompt: 'select_account'
 });
@@ -27,10 +28,10 @@ function loginWithGoogle() {
             localStorage.setItem('userPhotoURL', user.photoURL);
             localStorage.setItem('userName', user.displayName);
             localStorage.setItem('userEmail', user.email);
-            window.location.href = "inicial.html"; 
+            window.location.href = "selecao.html";  // Redireciona para a tela de seleção
         })
         .catch((error) => {
-            console.error(error);
+            console.error("Erro ao realizar login com o Google:", error);
         });
 }
 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ecf0f1;
+        }
+
+        /* Container para centralizar o conteúdo */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Altura total da tela */
+            background-color: #ecf0f1;
+        }
+
+        /* Estilo para o conteúdo da página */
+        .content {
+            background-color: white;
+            border-radius: 10px;
+            width: 80%; /* Ajustar largura para ser 80% da tela */
+            max-width: 800px; /* Largura máxima */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos para título e descrição */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Botões */
+        button {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(14, 54, 175);
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(14, 54, 175);
+        }
+
+        /* Rodapé */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(14, 54, 175); /* Cor azul alterada */
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white; /* Texto branco para os ícones do rodapé */
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #1f66d6; /* Tom mais escuro do azul */
+        }
+
+        /* Estilos para os ícones do rodapé */
+        footer img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Bem-vindo, [Nome do Usuário]</h1>
+            <p>Email: [Email do Usuário]</p>
+            <p>Foto de Perfil:</p>
+            <img src="[URL da Foto]" alt="Foto do Usuário" width="150" height="150">
+
+            <!-- Botão para editar perfil ou outras ações -->
+            <button>Editar Perfil</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <a href="inicial-cliente.html"><img src="imagens/home-removebg-preview.png" alt="Botão de Início"></a>
+        <a href="conversas.html"><img src="imagens/chat-removebg-preview.png" alt="Chat"></a>
+        <a href="servicos.html"><img src="imagens/sla-removebg-preview.png" alt="Lista de Controle"></a>
+        <a href="perfil-usuario-cliente.html"><img src="imagens/perfil-usuario.png" alt="Perfil do Usuário"></a>
+    </footer>
+
+</body>
+</html>
