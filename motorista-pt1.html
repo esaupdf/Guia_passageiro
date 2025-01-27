@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar como motorista</title>
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Estilos para o botão de voltar */
+        .botao-voltar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .botao-voltar button {
+            background-color: #58af9b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao-voltar button:hover {
+            background-color: #45a089;
+        }
+    </style>
 </head>
 <body>
     <header class="header-motorista-pt1">
@@ -12,38 +36,19 @@
     </header>
 
     <div class="alinhar-motorista">
-
-        <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista">
-          <img src="imagens/vista-lateral-preta-da-van.png" alt="van">
-          <p>Viagens de van</p>
-        </div></a>
-
-        <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista">
-            <img src="imagens/vista-lateral-preta-da-van.png" alt="van">
-            <p>Entregas de van</p>
-          </div></a>
-
-          <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista">
-            <img src="imagens/carro.png" alt="van">
-            <p>Viagens de carro</p>
-          </div></a>
-
-          <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista">
-            <img src="imagens/carro.png" alt="van">
-            <p>Entregas de carro</p>
-          </div></a>
-
-          <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista">
-            <img src="imagens/moto.png" alt="van">
-            <p>Viagens de moto</p>
-          </div></a>
-
-          <a class="link-chat" href="motorista-pt2.html"><div class="estilos-motorista"> 
-            <img src="imagens/moto.png" alt="van">
-            <p>Entregas de moto</p>
-          </div></a>
+        <a class="link-chat" href="cadastro-motorista.html">
+            <div class="estilos-motorista">
+                <img src="imagens/carro.png" alt="carro">
+                <p>Viagens de carro</p>
+            </div>
+        </a>
     </div>
-  
-    
+
+    <!-- Botão de voltar -->
+    <div class="botao-voltar">
+        <a href="selecao.html">
+            <button>Voltar</button>
+        </a>
+    </div>
 </body>
 </html>

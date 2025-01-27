@@ -3,132 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Motorista - Informações Pessoais</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Cadastro do Motorista</title>
     <style>
+        /* Estilos globais */
         body {
-            background-color: #f4f8fb;
-            font-family: 'Open Sans', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
         }
 
-        .container-cadastro {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .header-cadastro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header-cadastro h1 {
-            font-size: 32px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .header-cadastro p {
-            font-size: 16px;
-            color: #7f8c8d;
-        }
-
-        .form-cadastro {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .form-cadastro label {
-            display: block;
-            font-size: 14px;
-            color: #34495e;
-            margin-bottom: 8px;
-        }
-
-        .form-cadastro input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #dcdfe6;
-            border-radius: 8px;
-            font-size: 14px;
-            box-sizing: border-box;
-            background-color: #f9fbfc;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-cadastro input:focus {
-            border-color: #58af9b;
-            outline: none;
-        }
-
-        .form-cadastro button {
-            width: 100%;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: bold;
+        /* Cabeçalho */
+        header {
             background-color: #58af9b;
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        .form-cadastro button:hover {
+        /* Main */
+        .main-cadastro {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        /* Inputs e select */
+        .input-select, .input-text {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Botões */
+        .btn {
+            background-color: #58af9b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
             background-color: #45a089;
         }
 
-        .link-voltar {
-            text-align: center;
+        /* Estilo para o select */
+        input[type="text"] {
+            font-size: 16px;
+        }
+
+        input[type="submit"]:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        /* Estilo para o botão de continuar */
+        .btn-continuar {
             margin-top: 20px;
+            text-align: center;
         }
 
-        .link-voltar a {
-            font-size: 14px;
-            color: #58af9b;
-            font-weight: 600;
-            text-decoration: none;
+        .btn-continuar button {
+            background-color: #58af9b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        .link-voltar a:hover {
-            text-decoration: underline;
+        .btn-continuar button:hover {
+            background-color: #45a089;
         }
     </style>
 </head>
 <body>
-    <div class="container-cadastro">
-        <div class="header-cadastro">
-            <h1>Cadastro de Motorista</h1>
-            <p>Preencha suas informações pessoais.</p>
+    <header class="header">
+        <h1>Cadastre seu veículo</h1>
+    </header>
+
+    <main class="main-cadastro">
+        <section class="form-section">
+            <label for="carrosSelect">Selecione o modelo do carro:</label>
+            <select id="carrosSelect" class="input-select">
+                <!-- Modelos serão carregados aqui dinamicamente -->
+                <option value="" disabled selected>Carregando...</option>
+            </select>
+        </section>
+
+        <section class="form-section">
+            <h2>Não encontrou seu modelo?</h2>
+            <form id="adicionarCarroForm">
+                <label for="novoCarroInput">Adicione um novo modelo:</label>
+                <input type="text" id="novoCarroInput" class="input-text" placeholder="Digite o nome do carro" required>
+                <button id="adicionarCarroButton" class="btn" type="submit">Adicionar Carro</button>
+            </form>
+        </section>
+
+        <!-- Botão de continuar -->
+        <div class="btn-continuar" id="btnContinuar" style="display: none;">
+            <a href="motorista-pt2.html">
+                <button>Continuar para cadastro</button>
+            </a>
         </div>
-        <form class="form-cadastro" action="veiculo-documentos.html" method="GET">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    </main>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCN81xPJLHv36xqcgelTubqQAmipn9iu2E",
+            authDomain: "guia-passageiro-38e3c.firebaseapp.com",
+            databaseURL: "https://guia-passageiro-38e3c-default-rtdb.firebaseio.com/",
+            projectId: "guia-passageiro-38e3c",
+            storageBucket: "guia-passageiro-38e3c.appspot.com",
+            messagingSenderId: "847813698216",
+            appId: "1:847813698216:web:3e9c6eea42956ddbff589d"
+        };
 
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+        // Inicializando o Firebase
+        firebase.initializeApp(firebaseConfig);
 
-            <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+        // Referência para a coleção "carrosPopulares"
+        const db = firebase.firestore();
 
-            <button type="submit">Avançar</button>
-        </form>
-        <div class="link-voltar">
-            <p><a href="selecao.html">Voltar</a></p>
-        </div>
-    </div>
+        // Função para carregar os carros do Firestore e exibir no select
+        function carregarCarros() {
+            const selectCarros = document.getElementById("carrosSelect");
+
+            // Limpar o select antes de carregar os novos carros
+            selectCarros.innerHTML = '<option value="" disabled selected>Carregando...</option>';
+
+            // Buscar carros da coleção "carrosPopulares" no Firestore
+            db.collection("carrosPopulares").get().then((querySnapshot) => {
+                // Verificar se há carros na coleção
+                if (querySnapshot.empty) {
+                    selectCarros.innerHTML = '<option value="" disabled>Não há carros disponíveis</option>';
+                    return;
+                }
+
+                // Preencher o select com os modelos de carros
+                selectCarros.innerHTML = ''; // Limpar o "Carregando..."
+
+                querySnapshot.forEach((doc) => {
+                    const carro = doc.data();
+                    const option = document.createElement("option");
+                    option.value = carro.nome;
+                    option.textContent = carro.nome;
+                    selectCarros.appendChild(option);
+                });
+
+                // Exibir o botão de continuar após carregar os carros
+                document.getElementById("btnContinuar").style.display = "block";
+            }).catch((error) => {
+                console.error("Erro ao carregar carros:", error);
+                selectCarros.innerHTML = '<option value="" disabled>Erro ao carregar carros</option>';
+            });
+        }
+
+        // Função para adicionar um novo carro ao Firestore
+        function adicionarCarro(event) {
+            event.preventDefault();
+
+            const novoCarroInput = document.getElementById("novoCarroInput").value;
+
+            if (!novoCarroInput.trim()) {
+                alert("Por favor, insira um nome válido para o carro.");
+                return;
+            }
+
+            // Adicionar o novo carro ao Firestore
+            db.collection("carrosPopulares").add({
+                nome: novoCarroInput
+            }).then(() => {
+                alert("Carro adicionado com sucesso!");
+                carregarCarros(); // Atualizar a lista de carros
+                document.getElementById("novoCarroInput").value = ""; // Limpar o campo de input
+            }).catch((error) => {
+                console.error("Erro ao adicionar carro:", error);
+            });
+        }
+
+        // Carregar carros quando a página carregar
+        window.onload = carregarCarros;
+
+        // Evento de adicionar carro
+        document.getElementById("adicionarCarroForm").addEventListener("submit", adicionarCarro);
+    </script>
 </body>
 </html>

@@ -38,3 +38,53 @@ function loginWithGoogle() {
 // Adicionando ouvintes de evento aos botões de login com Google
 document.getElementById('googleLoginButton').addEventListener('click', loginWithGoogle);
 document.getElementById('googleLoginButton2').addEventListener('click', loginWithGoogle);
+
+// Código para carregar e adicionar carros no Firestore
+
+const db = firebase.firestore();
+
+function carregarCarros() {
+    const selectCarros = document.getElementById("carrosSelect");
+    selectCarros.innerHTML = "<option>Carregando...</option>"; // Mensagem enquanto carrega
+
+    db.collection("carrosPopulares")
+        .get()
+        .then((querySnapshot) => {
+            selectCarros.innerHTML = ""; // Limpa a mensagem de "Carregando..."
+            querySnapshot.forEach((doc) => {
+                const carro = doc.data();
+                const option = document.createElement("option");
+                option.value = carro.nome;
+                option.textContent = carro.nome;
+                selectCarros.appendChild(option);
+            });
+        })
+        .catch((error) => {
+            console.error("Erro ao carregar carros:", error);
+        });
+}
+
+function adicionarCarro(event) {
+    event.preventDefault();
+    const novoCarroInput = document.getElementById("novoCarroInput").value;
+
+    if (!novoCarroInput.trim()) {
+        alert("Por favor, insira um nome válido para o carro.");
+        return;
+    }
+
+    db.collection("carrosPopulares")
+        .add({ nome: novoCarroInput })
+        .then(() => {
+            alert("Carro adicionado com sucesso!");
+            carregarCarros();
+            document.getElementById("novoCarroInput").value = ""; // Limpa o campo de input
+        })
+        .catch((error) => {
+            console.error("Erro ao adicionar carro:", error);
+        });
+}
+
+// Chamar a função para carregar os carros ao carregar a página
+document.addEventListener("DOMContentLoaded", carregarCarros);
+document.getElementById("adicionarCarroButton").addEventListener("click", adicionarCarro);
